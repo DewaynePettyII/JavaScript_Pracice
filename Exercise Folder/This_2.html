@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- This alone, when we use alone, the owner is the global object, so this refers to the global object. -->
+<!-- In a Browser window the global object is [object Window] -->
+<!-- In Strict mode, when used alone, This alos refers to the global object [object Window] -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">
+
+    </p>
+    <script>
+        "use strict";
+        var x = this;
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>
